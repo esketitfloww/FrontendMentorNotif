@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>Notifications</li>
+          <li id="number">3</li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li class="markRead" id="markRead">Mark all as read </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="container">
+    <div class="notification" id="not-read">
+      <img src="assets/images/avatar-mark-webber.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Mark Webber </span></a>
+            <span> reacted to your recent post</span> 
+            <a href="#"><span class="post">My first tournament today!</span></a>
+            <p class="time">1m ago</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="notification" id="not-read">
+      <img src="assets/images/avatar-angela-gray.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Angela Gray</span></a>
+            <span> followed you</span>
+            <p class="time">1m ago</p>
+          </div> 
+      </div>
+    </div>
+
+    <div class="notification" id="not-read">
+      <img src="assets/images/avatar-jacob-thompson.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Jacob Thompson</span></a>
+            <span>has joined your group</span> 
+            <a href="#"><span class="group">Chess Club</span></a>
+            <p class="time">1m ago</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="notification" id="read">
+      <img src="assets/images/avatar-rizky-hasanuddin.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Rizky Hasanuddin</span></a>
+            <span>sent you a private message</span>
+            <p class="time">5 days ago</p>
+            <a href="#"><p class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p></a>
+          </div> 
+      </div>
+    </div>
+
+    <div class="notification" id="read">
+      <img src="assets/images/avatar-kimberly-smith.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Kimberly Smith</span></a>
+            <span>Commented on your picture</span> 
+            <p class="time">1 week ago</p>
+          </div>
+          <a href="#"><img src="assets/images/image-chess.webp"></a>
+      </div> 
+    </div>
+
+    <div class="notification" id="read">
+      <img src="assets/images/avatar-nathan-peterson.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Nathan Peterson</span></a>
+            <span> reacted to your recent post</span> 
+            <a href="#"><span class="post">5 end-game strategies to increase your win rate</span></a>
+            <p class="time">2 weeks ago</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="notification" id="read">
+      <img src="assets/images/avatar-anna-kim.webp">
+      <div class="notif-item">
+          <div class="action">
+            <a href="#" id="link"><span class="name">Anna Kim</span></a>
+            <span>left the group</span> 
+            <a href="#"><span class="group">Chess Club</span></a>
+            <p class="time">2 weeks ago</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/esketitfloww" target="_blank">esketitfloww</a>.
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const markReadButton = document.getElementById("markRead");
+      const notReadElements = document.querySelectorAll("#not-read");
+
+      markReadButton.addEventListener("click", function() {
+        notReadElements.forEach(function(element) {
+        element.id = "read";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
